@@ -74,7 +74,7 @@ spec:
   - metadata:
       name: data
     spec:
-      storageClassName: ssd
+      storageClassName: local-storage
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
