@@ -2,6 +2,6 @@
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
-  name: local
+  name: local-immediate
 provisioner: kubernetes.io/no-provisioner
 volumeBindingMode: Immediate

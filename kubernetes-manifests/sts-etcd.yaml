@@ -38,7 +38,7 @@ spec:
   replicas: 3
   selector:
      matchLabels:
-      app: etcd
+       app: etcd
   template:
     metadata:
       name: etcd
@@ -74,8 +74,9 @@ spec:
   - metadata:
       name: data
     spec:
-      storageClassName: local
+      storageClassName: local-immediate
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
           storage: 1Gi
+
