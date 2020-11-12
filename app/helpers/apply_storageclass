@@ -1,0 +1,3 @@
+#!/bin/bash
+
+kubectl apply -f /home/minikube/repos/microservices-demo/kubernetes-manifests/storage-class.yml && kubectl get storageclass
