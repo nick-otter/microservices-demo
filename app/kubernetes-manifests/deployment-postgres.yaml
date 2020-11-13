@@ -1,9 +1,12 @@
-apiVersion: apps
-kind: Deployment
+apiVersion: apps/v1
+kind: Deployment 
 metadata:
-  name: postgresi
+  name: postgres
   namespace: app
 spec:
+  selector:
+    matchLabels:
+      app: postgres
   template:
     metadata:
       labels:
