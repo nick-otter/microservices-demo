@@ -18,4 +18,5 @@ build:
 deploy:
   kubectl:
     manifests:
-    - ./kubernetes-manifests/**.yaml
+    - ./manifests/**.yaml
+    - ./manifests/monitoring/**.yaml  
