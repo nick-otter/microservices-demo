@@ -1,0 +1,51 @@
+# Custom values for prometheus-operator.
+# This is a YAML-formatted file. 
+# Declare variables to be passed into your templates.
+
+## Configuration for grafana
+## Using default values from https://github.com/helm/charts/blob/master/stable/grafana/values.yaml
+##
+grafana:
+   ## Admin credentials
+   ##
+   adminUsername: foo
+   adminPassword: bar
+   
+   ## Configuration for Grafana service
+   ##
+   service:
+      annotations: {}
+      labels: {}
+
+      ## Port for Grafana service to listen on
+      port: 80
+
+      ## Port to expose on each node
+      ## Only used if service.type is 'NodePort'
+      type: NodePort
+      nodePort: 30080
+
+## Configuration for prometheus
+##
+prometheus:
+   ## Configuration for Prometheus service
+   ##     
+   service:
+      annotations: {}
+      labels: {}
+      
+      ## Port for Prometheus service to listen on
+      port: 9090
+
+      ##  Port to expose on each node
+      ##  Only used if service.type is 'NodePort'
+      type: NodePort
+      nodePort: 30090
+
+## Configuration for alertmanager      
+## ref: https://prometheus.io/docs/alerting/alertmanager/
+##
+alertmanager:
+    ## Deploy alertmanager.
+    ##
+    enabled: false
