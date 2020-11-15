@@ -8,7 +8,7 @@
 grafana:
    ## Admin credentials
    ##
-   adminUsername: foo
+   adminUser: foo
    adminPassword: bar
    
    ## Configuration for Grafana service
