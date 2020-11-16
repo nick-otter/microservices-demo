@@ -19,4 +19,4 @@ deploy:
   kubectl:
     manifests:
     - ./manifests/**.yaml
-    - ./manifests/monitoring/**.yaml  
+    - ./manifests/kube-system/**.yaml  
