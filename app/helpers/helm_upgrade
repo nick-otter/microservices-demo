@@ -1,3 +1,0 @@
-#!/bin/bash
-
-helm upgrade --install --namespace monitoring prometheus stable/prometheus-operator -f values.yaml
