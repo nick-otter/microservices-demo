@@ -27,6 +27,8 @@ spec:
         - name: dashboard
           containerPort: 8080
         args:
-        - --api
-        - --kubernetes
-        - --logLevel=INFO
+        - "--api"
+        - "--kubernetes"
+        - "--logLevel=INFO"
+        - "--metrics"
+        - "--metrics:prometheus.buckets=0.1,0.3,1.2,5.0"
