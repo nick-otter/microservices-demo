@@ -1,11 +1,13 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: traefik-ingress-service
+  labels:
+    k8s-app: traefik
+  name: traefik
   namespace: kube-system
 spec:
   selector:
-    k8s-app: traefik-ingress-lb
+    k8s-app: traefik
   ports:
     - protocol: TCP
       port: 80
@@ -13,5 +15,7 @@ spec:
     - protocol: TCP
       port: 8080
       name: dashboard
-
+    - protocol: TCP
+      port: 8008
+      name: metrics
   type: NodePort
