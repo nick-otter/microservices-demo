@@ -3,7 +3,6 @@ apiVersion: apps/v1
 metadata:
   name: traefik
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: traefik
