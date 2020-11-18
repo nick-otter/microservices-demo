@@ -41,6 +41,22 @@ prometheus:
       ##  Only used if service.type is 'NodePort'
       type: NodePort
       nodePort: 30090
+   ## Confiugration for additional Prometheus service monitors
+   ##   
+   prometheusSpec:
+    additionalServiceMonitors:
+      - name: traefik
+        additionalLabels:
+          - app: traefik
+        endpoints:
+          - port: app
+            interval: 5s
+        namespaceSelector:
+          matchNames:
+            - kube-system
+        selector:
+          matchLabels:
+            app: traefik
 
 ## Configuration for alertmanager      
 ## ref: https://prometheus.io/docs/alerting/alertmanager/
