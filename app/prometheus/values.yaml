@@ -48,6 +48,7 @@ prometheus:
       - name: traefik
         additionalLabels:
           - app: traefik
+            release: prometheus-operator
         endpoints:
           - port: app
             interval: 5s
