@@ -2,27 +2,21 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: traefik
-  namespace: kube-system
-  labels:
-    k8s-app: traefik
 spec:
   replicas: 1
   selector:
     matchLabels:
-      k8s-app: traefik
+      app: traefik
   template:
     metadata:
       labels:
-        k8s-app: traefik
-        name: traefik
+        app: traefik
     spec:
-      serviceAccountName: traefik
-      terminationGracePeriodSeconds: 60
       containers:
-      - image: traefik:v1.7-alpine
-        name: traefik
+      - name: traefik
+        image: traefik:v1.7-alpine
         ports:
-        - name: app-services
+        - name: app
           containerPort: 80
         - name: dashboard
           containerPort: 8080

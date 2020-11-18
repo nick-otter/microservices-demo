@@ -1,18 +1,22 @@
 kind: Service
 apiVersion: v1
 metadata:
-  labels:
-    k8s-app: traefik
   name: traefik
   namespace: kube-system
+  labels:
+    app: traefik
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/path: /metrics
+    prometheus.io/port: "80"
 spec:
   selector:
-    k8s-app: traefik
+     app: traefik
   ports:
-    - protocol: TCP
+    - name: app
       port: 80
-      name: app-services
-    - protocol: TCP
+      targetPort: 80
+    - name: dashboard
       port: 8080
-      name: dashboard
-  type: NodePort
+      targetPort: 8080
+  type: ClusterIP
