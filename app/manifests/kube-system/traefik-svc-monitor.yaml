@@ -5,10 +5,11 @@ metadata:
   namespace: monitoring
   labels:
     app: traefik
+    release: prometheus
 spec:
   endpoints:
   - path: /metrics
-    port: app
+    port: dashboard
     interval: 15s
   namespaceSelector:
     matchNames:

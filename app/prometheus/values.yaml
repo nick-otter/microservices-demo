@@ -28,20 +28,7 @@ grafana:
 ## Configuration for prometheus
 ##
 prometheus:
-   ## Configuration for Prometheus service
-   ##     
-   service:
-      annotations: {}
-      labels: {}
-      
-      ## Port for Prometheus service to listen on
-      port: 9090
-
-      ##  Port to expose on each node
-      ##  Only used if service.type is 'NodePort'
-      type: NodePort
-      nodePort: 30090
-   ## Confiugration for additional Prometheus service monitors
+   ## Configuration for additional Prometheus service monitors
    ##   
    prometheusSpec:
     additionalServiceMonitors:
