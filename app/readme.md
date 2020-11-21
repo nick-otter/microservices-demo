@@ -19,13 +19,19 @@ Kube-system **`Namespace`**
 * Minikube
 * Kuberenetes 
 * Helm
+* Skaffold
 
 
 # Deployment
 
 ```
-$ bash helpers/run
+$ minikube start 
 ```
+```
+firewall-cmd --zone=public --add-masquerade --permanent &&
+firewall-cmd --reload &&
+```
+
 ```
 $ skaffold run
 ```
