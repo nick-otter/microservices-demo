@@ -30,12 +30,12 @@ $ firewall-cmd --zone=public --add-masquerade --permanent &&
 $ firewall-cmd --reload &&
 ```
 
+Raise minikube cluster
 ```
 $ minikube start 
 ```
 
-
-
+Apply all manifests
 ```
 $ skaffold run
 ```
