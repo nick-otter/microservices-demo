@@ -54,6 +54,6 @@ $ helm install prometheus prometheus-community/kube-prometheus-stack --namespace
 
 No persistent ingress is configured right now, please use `port-forward` to view dashboards. 
 
-`$ kubectl port-forward` `svc/` `prometheus``grafana` `alertmanager` 9090 -n monitoring
+`$ kubectl port-forward` `svc/` `prometheus``grafana` `alertmanager` `9090` `8080:80` `-n monitoring`
 ```
 
