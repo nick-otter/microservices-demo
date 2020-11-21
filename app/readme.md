@@ -6,7 +6,7 @@ Current estate:
 
 App **`Namespace`**
 * [go-url-shortener](https://github.com/xcoulon/go-url-shortener)
-* Postrges
+* Postgres
 
 Monitoring **`Namespace`**
 * Prometheus
