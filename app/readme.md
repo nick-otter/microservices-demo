@@ -24,7 +24,7 @@ Kube-system **`Namespace`**
 
 # Deployment
 
-Configure local firewall. E.g. RHEL 8.1 configuration is..
+Configure local firewall to consent to minikube. E.g. RHEL 8.1 configuration is..
 ```
 $ firewall-cmd --zone=public --add-masquerade --permanent &&
 $ firewall-cmd --reload &&
