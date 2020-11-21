@@ -24,24 +24,23 @@ Kube-system **`Namespace`**
 
 # Deployment
 
-Configure local firewall. E.g. RHEL 8.1 configuration is
+Configure local firewall. E.g. RHEL 8.1 configuration is..
 ```
 $ firewall-cmd --zone=public --add-masquerade --permanent &&
 $ firewall-cmd --reload &&
 ```
 
-Raise minikube cluster
+Raise minikube cluster.
 ```
 $ minikube start 
 ```
 
-Apply all manifests
+Apply all manifests.
 ```
 $ skaffold run
 ```
 
-Install Prometheus
-
+Install Prometheus.
 ```
 $ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 $ helm repo add stable https://charts.helm.sh/stable
