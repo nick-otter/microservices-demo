@@ -24,13 +24,17 @@ Kube-system **`Namespace`**
 
 # Deployment
 
+Configure local firewall. E.g. RHEL 8.1 configuration.
+```
+$ firewall-cmd --zone=public --add-masquerade --permanent &&
+$ firewall-cmd --reload &&
+```
+
 ```
 $ minikube start 
 ```
-```
-firewall-cmd --zone=public --add-masquerade --permanent &&
-firewall-cmd --reload &&
-```
+
+
 
 ```
 $ skaffold run
