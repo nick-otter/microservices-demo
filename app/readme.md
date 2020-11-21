@@ -4,13 +4,13 @@ This is just an example cluster: a simple app with some monitoring resources.
 
 Current estate:
 
-App
+App **`Namespace`**
 * 
 
-Monitoring
+Monitoring **`Namespace`**
 * Prometheus
 
-Kube-system 
+Kube-system **`Namespace`**
 * Traefik ingress controller
 
 # Requirements
